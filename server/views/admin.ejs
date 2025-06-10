@@ -1,0 +1,16 @@
+<%- include('header', {user}) %>
+<h2>Add Question</h2>
+<form method="POST" action="/admin/add">
+  <textarea name="text" placeholder="LaTeX question" rows="4" cols="50" required></textarea><br>
+  <textarea name="answer" placeholder="LaTeX answer" rows="4" cols="50" required></textarea><br>
+  <input name="tags" placeholder="tags comma separated"><br>
+  <button class="button" type="submit">Add</button>
+</form>
+<hr>
+<h2>Questions</h2>
+<ul>
+  <% questions.forEach(q => { %>
+    <li>#<%= q.id %> - <%= q.tags.join(', ') %></li>
+  <% }) %>
+</ul>
+<%- include('footer') %>

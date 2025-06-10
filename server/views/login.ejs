@@ -1,0 +1,7 @@
+<%- include('header', {user}) %>
+<form method="POST" action="/login">
+  <input name="username" placeholder="Username" required>
+  <input type="password" name="password" placeholder="Password" required>
+  <button class="button" type="submit">Login</button>
+</form>
+<%- include('footer') %>

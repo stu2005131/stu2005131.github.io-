@@ -1,0 +1,12 @@
+<%- include('header', {user}) %>
+<h2>Questions <% if(tag){ %> - Tag: <%= tag %><% } %></h2>
+<ul>
+  <% questions.forEach(q => { %>
+    <li class="question">
+      <div> #<%= q.id %> - <%= q.tags.join(', ') %></div>
+      <div><%= q.text %></div>
+      <div class="tags"><a href="/question/<%= q.id %>">View</a></div>
+    </li>
+  <% }) %>
+</ul>
+<%- include('footer') %>

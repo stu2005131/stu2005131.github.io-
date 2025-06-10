@@ -1,0 +1,7 @@
+[
+  {
+    "question": "When $x=1$, what is $x^2$?",
+    "answer": "$1^2 = 1$",
+    "tags": ["sample", "algebra"]
+  }
+]

@@ -1,0 +1,18 @@
+<%- include('header', {user}) %>
+<div class="question">
+  <div><%= q.text %></div>
+  <div class="tags">Tags: <%= q.tags.join(', ') %></div>
+  <form method="POST" action="/question/<%= q.id %>/mark">
+    <select name="status">
+      <option value="">Select status</option>
+      <option value="understood" <%= status==='understood'?'selected':'' %>>Understood</option>
+      <option value="not" <%= status==='not'?'selected':'' %>>Not fully understood</option>
+    </select>
+    <button class="button" type="submit">Save</button>
+  </form>
+  <button class="button" onclick="document.getElementById('ans').style.display='block';this.style.display='none';">Show Answer</button>
+  <div id="ans" style="display:none;">
+    <%= q.answer %>
+  </div>
+</div>
+<%- include('footer') %>

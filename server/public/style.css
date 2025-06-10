@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background:#fafafa; margin:0; padding:0; }
+header { background:#4caf50; color:#fff; padding:10px; }
+a { color:#4caf50; }
+.question { border:1px solid #ddd; margin:10px; padding:10px; background:#fff; }
+.tags { margin-top:5px; }
+.button { background:#4caf50; color:#fff; border:none; padding:5px 10px; cursor:pointer; }
